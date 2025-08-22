@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logical Operators
+    </title>
+</head>
+
+<body>
+    <script>
+
+        // Create isStudent = true, hasIDCard = false. Use &&, ||, and ! to check exam hall eligibility. 
+        let isStudent = true;
+        let hasIDCard = false;
+
+        // AND (both must be true)
+        console.log(isStudent && hasIDCard);
+
+        // OR (at least one true)
+        console.log(isStudent || hasIDCard);
+
+        // NOT (opposite of isStudent)
+        console.log(!isStudent);
+
+
+
+        //  Check if temperature = 32.
+
+        let temperature = 32;
+
+        console.log(temperature >= 40 && temperature <= 30 && "It's Hot" || "Normal");
+
+
+        // Create username = "admin", password = "1234".
+
+        let username = "admin";
+        let password = "1234";
+
+        if (username === "admin" && password === "1234") {
+            console.log("Login Successful");
+        } else {
+            console.log("Login Failed");
+        }
+
+    </script>
+</body>
+
+</html>

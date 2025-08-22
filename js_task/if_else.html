@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1. Number Sign Checker
+        // Write a program that checks whether a number is positive, negative, or zero.
+
+
+            let input = prompt("Enter a number:");  // user se input lo
+
+            if (isNaN(input)) {
+                alert(" Please enter a valid number.");   // Agar number nahi hua
+            } else {
+                input = Number(input);
+
+                if (input > 0) {
+                    alert(" The number is Positive.");
+                } else {
+                    if (input < 0) {
+                        alert(" The number is Negative.");
+                    } else {
+                        alert("ℹThe number is Zero.");
+                    }
+                }
+            }
+
+
+        // //         2. Even or Odd
+        // // Take a number as input and check whether it is even or odd.
+
+        let box = prompt("Enter a number:");
+
+        if (isNaN(input)) {
+            alert(" Please enter a valid number.");
+        } else {
+            input = Number(input);
+
+            if (input % 2 === 0) {
+                alert(" The number is Even.");
+            } else {
+                alert("The number is Odd.");
+            }
+        }
+
+
+        // //         3. Voting Eligibility
+        // // Ask the user for their age and print whether they are eligible to vote (18 or above) or not.
+
+        let age = prompt("Enter your age:");  // user se input lo
+
+        if (isNaN(age)) {
+            alert(" Please enter a valid number.");   // Agar number nahi hua
+        } else {
+            age = Number(age);  // string ko number me convert karo
+
+            if (age > 18) {
+                alert(" You are eligible to vote.");
+            } else {
+                if (age === 18) {
+                    alert(" Congratulations! You just became eligible to vote.");
+                } else {
+                    alert(" You are not eligible to vote.");
+                }
+            }
+        }
+
+
+        // //         4. Largest of Two Numbers
+        // // Compare two numbers and print the greater number
+
+        let num1 = prompt("Enter the first number:");
+        let num2 = prompt("Enter the second number:");
+
+        if (isNaN(num1) || isNaN(num2)) {
+            alert(" Please enter valid numbers.");   //
+        } else {
+            num1 = Number(num1);
+            num2 = Number(num2);
+
+            if (num1 > num2) {
+                alert("The greater number is: " + num1);
+            } else {
+                if (num2 > num1) {
+                    alert(" The greater number is: " + num2);
+                } else {
+                    alert("ℹ Both numbers are equal.");
+                }
+            }
+        }
+
+
+
+
+        //         5. Grade Calculator
+        // Take marks as input and print grades:
+
+
+
+        let marks = prompt("Enter your marks (0-100):");
+
+        if (isNaN(marks)) {
+            alert(" Please enter a valid number.");
+        } else {
+            marks = Number(marks);
+
+            if (marks >= 80 && marks <= 100) {
+                alert(" Grade: A");
+            } else if (marks >= 50 && marks <= 80) {
+                alert(" Grade: B");
+            } else if (marks >= 33 && marks <= 50) {
+                alert(" Grade: C");
+            } else if (marks >= 0 && marks < 33) {
+                alert(" Fail");
+            } else {
+                alert(" Invalid Marks! Please enter between 0 and 100.");
+            }
+        }
+        // //         6. Leap Year Checker
+        // // Check whether a given year is a leap year or not.
+
+
+        // let year = prompt("Enter a year:");
+
+        // if (isNaN(year)) {
+        //     alert(" Please enter a valid number.");
+        // } else {
+        //     year = Number(year);
+
+        //     if (year % 400 === 0) {
+        //         alert(" " + year + " is a Leap Year.");
+        //     } else if (year % 100 === 0) {
+        //         alert(" " + year + " is NOT a Leap Year.");
+        //     } else if (year % 4 === 0) {
+        //         alert(" " + year + " is a Leap Year.");
+        //     } else {
+        //         alert(" " + year + " is NOT a Leap Year.");
+        //     }
+        // }
+        // //        7. Simple Calculator (switch case)
+        // // Take two numbers and an operator (+, -, *, /).
+        // // Use switch-case to perform the calculation.
+
+        let num3 = prompt("Enter the first number:");
+        let num4 = prompt("Enter the second number:");
+        let operator = prompt("Enter an operator (+, -, *, /):");
+
+        if (isNaN(num1) || isNaN(num2)) {
+            alert(" Please enter valid numbers.");
+        } else {
+            num1 = Number(num1);
+            num2 = Number(num2);
+
+            switch (operator) {
+                case "+":
+                    alert("Result: " + (num3 + num4));
+                    break;
+
+                case "-":
+                    alert("Result: " + (num3 - num4));
+                    break;
+
+                case "*":
+                    alert("Result: " + (num3 * num4));
+                    break;
+
+                case "/":
+                    if (num3 === 0) {
+                        alert("Division by zero is not allowed!");
+                    } else {
+                        alert("Result: " + (num3 / num4));
+                    }
+                    break;
+
+                default:
+                    alert(" Invalid operator! Please use +, -, *, /");
+            }
+        }
+
+
+        //         8. Character Type Checker
+        // Take a character input and check if it is:
+
+        let char = prompt("Enter a character:");
+
+
+        if (!char) {
+            alert(" Please enter a character.");
+        } else {
+            char = char.toLowerCase();
+
+            if (char.length !== 1 || !(/[a-z]/).test(char)) {
+                alert(" Not a letter.");
+            } else {
+                if (char === "a" || char === "e" || char === "i" || char === "o" || char === "u") {
+                    alert(" It is a Vowel.");
+                } else {
+                    alert(" It is a Consonant.");
+                }
+            }
+        }
+        // 9. Discount on Shopping
+        // If shopping amount is:
+
+
+        let amount = prompt("Enter your shopping amount:");
+
+        if (isNaN(amount)) {
+            alert(" Please enter a valid number.");
+        } else {
+            amount = Number(amount);
+
+            let discount = 0;
+
+            if (amount > 500) {
+                discount = 0.20 * amount;  // 20% discount
+            } else if (amount >= 200 && amount <= 500) {
+                discount = 0.10 * amount;  // 10% discount
+            } else if (amount < 200 && amount >= 0) {
+                discount = 0;              // no discount
+            } else {
+                alert(" Invalid amount!");
+                
+            }
+        
+
+            let finalPrice = amount - discount;
+
+            alert(" Original Amount: ₹" + amount +
+                "\n Discount: ₹" + discount +
+                "\n Final Price: ₹" + finalPrice);
+        }
+        // 10. Traffic Light Simulation
+        // Take input as "red", "yellow", or "green".
+        // Display appropriate message:
+
+        let signal = prompt("Enter the traffic light color (red, yellow, green):");
+
+        if (!signal) {
+            alert(" Please enter a color.");
+        } else {
+            signal = signal.toLowerCase();  // case-insensitive banane ke liye
+
+            switch (signal) {
+                case "red":
+                    alert(" Stop!");
+                    break;
+
+                case "yellow":
+                    alert(" Get Ready...");
+                    break;
+
+                case "green":
+                    alert("Go!");
+                    break;
+
+                default:
+                    alert("Invalid color! Please enter red, yellow, or green.");
+            }
+        }
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

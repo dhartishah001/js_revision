@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays & Objects (Moderate)</title>
+</head>
+
+<body>
+    <script>
+        // 1. Create an array fruits with 3 fruits
+        let fruits = ["Apple", "Banana", "Orange"];
+        console.log(fruits);
+
+        // Add one more fruit
+        fruits.push("Mango");
+        console.log(fruits);
+
+        // Remove the last item
+        fruits.pop();
+        console.log(fruits);
+
+        // 2. Create an object car
+        let car = {
+            brand: "Toyota",
+            model: "Corolla",
+            year: 2020
+        };
+
+        // Print each property
+        console.log(car.brand);
+        console.log(car.model);
+        console.log(car.year);
+
+        // Update the year
+        car.year = 2023;
+        console.log(car);
+
+        // 3. Create an object book
+        let book = {
+            title: "The Great Book",
+            author: "John Doe",
+            pages: 250
+        };
+
+        // Add a new property later
+        book.publishedYear = 2021;
+        console.log(book);
+
+    </script>
+</body>
+
+</html>
