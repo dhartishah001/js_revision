@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Interview Q&A</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 20px;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #fff;
+      padding: 20px 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .qa {
+      margin-bottom: 25px;
+      padding: 15px;
+      border-left: 5px solid #007bff;
+      background: #f1f8ff;
+      border-radius: 5px;
+    }
+
+    .qa b {
+      display: block;
+      font-size: 18px;
+      color: #007bff;
+      margin-bottom: 8px;
+    }
+
+    .qa i {
+      color: #444;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>💡 JavaScript Interview Q&A</h1>
+
+    <div class="qa">
+      <b>Q1: What are the different ways to declare a variable in JavaScript?</b>
+      <i>var, let, const – var is function-scoped, let & const are block-scoped. const cannot be reassigned.</i>
+    </div>
+
+    <div class="qa">
+      <b>Q2: What is the difference between == and === in JavaScript?</b>
+      <i>== checks only value (type conversion), === checks both value and type.</i>
+    </div>
+
+    <div class="qa">
+      <b>Q3: What is a JavaScript function and how do you define one?</b>
+      <i>A function is a block of reusable code. Defined using function keyword or arrow function.</i>
+    </div>
+
+    <div class="qa">
+      <b>Q4: What are arrow functions in JavaScript?</b>
+      <i>Short syntax using <code>=></code>, no own <code>this</code>, often used for callbacks.</i>
+    </div>
+
+    <div class="qa">
+      <b>Q5: What is the difference between null and undefined?</b>
+      <i>undefined → variable declared but not assigned.<br>
+      null → explicitly assigned “no value.”</i>
+    </div>
+
+    <div class="qa">
+      <b>Q6: What are JavaScript data types?</b>
+      <i>Primitive: String, Number, Boolean, Null, Undefined, Symbol, BigInt.<br>
+      Non-Primitive: Object, Array, Function, Date, Map, Set, etc.</i>
+    </div>
+
+    <div class="qa">
+      <b>Q7: What is the difference between function declaration and function expression?</b>
+      <i>Declaration → hoisted, can be called before definition.<br>
+      Expression → assigned to variable, not hoisted.</i>
+    </div>
+
+    <div class="qa">
+      <b>Q8: What is hoisting in JavaScript?</b>
+      <i>JS moves variable and function declarations to the top of scope before execution.</i>
+    </div>
+
+    <div class="qa">
+      <b>Q9: What is the difference between synchronous and asynchronous JavaScript?</b>
+      <i>Synchronous → executes line by line (blocking).<br>
+      Asynchronous → non-blocking (setTimeout, fetch, Promises).</i>
+    </div>
+
+    <div class="qa">
+      <b>Q10: What are JavaScript Promises?</b>
+      <i>Objects that represent a value which may be resolved (fulfilled) or rejected in the future.</i>
+    </div>
+
+    <div class="qa">
+      <b>Q11: What are JavaScript Closures?</b>
+      <i>A closure is when a function remembers variables from its outer scope even after the scope has finished.</i>
+    </div>
+
+    <div class="qa">
+      <b>Q12: What is the difference between call, apply, and bind?</b>
+      <i>call() → calls function with arguments individually.<br>
+      apply() → calls function with arguments as array.<br>
+      bind() → returns new function with bound this.</i>
+    </div>
+
+    <div class="qa">
+      <b>Q13: What is the difference between localStorage, sessionStorage, and cookies?</b>
+      <i>localStorage → permanent storage.<br>
+      sessionStorage → clears when tab closed.<br>
+      cookies → stored with expiry, sent to server.</i>
+    </div>
+
+    <div class="qa">
+      <b>Q14: What is the Event Loop in JavaScript?</b>
+      <i>The event loop manages execution of synchronous and asynchronous tasks. It pulls tasks from the callback queue and executes them when the call stack is empty.</i>
+    </div>
+
+    <div class="qa">
+      <b>Q15: What is async/await in JavaScript?</b>
+      <i>async/await is syntactic sugar for Promises. async makes a function return a Promise, await pauses execution until the Promise resolves.</i>
+    </div>
+
+    <div class="qa">
+      <b>Q16: What is the difference between for...in and for...of?</b>
+      <i>for...in → iterates over keys (properties) of an object.<br>
+      for...of → iterates over values of iterable objects like arrays, strings.</i>
+    </div>
+
+    <div class="qa">
+      <b>Q17: What is the difference between deep copy and shallow copy?</b>
+      <i>Shallow copy → copies references (changes affect original).<br>
+      Deep copy → creates completely new copy of object/array.</i>
+    </div>
+
+    <div class="qa">
+      <b>Q18: What is a JavaScript prototype?</b>
+      <i>Prototype is an object from which other objects inherit properties. Used for inheritance in JavaScript.</i>
+    </div>
+
+    <div class="qa">
+      <b>Q19: What is DOM in JavaScript?</b>
+      <i>DOM (Document Object Model) is a programming interface for HTML/XML documents. It allows JS to manipulate structure, style, and content.</i>
+    </div>
+
+    <div class="qa">
+      <b>Q20: What are higher-order functions?</b>
+      <i>Functions that take other functions as arguments or return a function. Example: map, filter, reduce.</i>
+    </div>
+
+  </div>
+</body>
+
+</html>
