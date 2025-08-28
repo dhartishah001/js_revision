@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        //Array – 10 Practical Tasks
+
+        //Create an array of numbers and find the sum of all elements.
+        let numbers = [5, 10, 15, 20];
+        let sum = numbers[0] + numbers[1] + numbers[2] + numbers[3];
+        console.log("Array:", numbers);
+        console.log("Sum:", sum);
+
+        let arr = [10, 5, 8, 5, 20, 15, 10, 2];
+        //  Find Maximum and Minimum
+        let max = Math.max( ...arr);
+        let min = Math.min(...arr);
+        console.log("Max:", max);
+        console.log("Min:", min);
+        //  Reverse an array (without reverse())
+        let reversed = arr.slice().reduce((acc, val) => [val, ...acc], []);
+        console.log("Reversed:", reversed);
+
+        //  Remove duplicate elements
+        let unique = arr.filter((value, index, self) => self.indexOf(value) === index);
+        console.log("Unique:", unique);
+
+        //  Sort ascending and descending
+        let asc = arr.slice().sort((a, b) => a - b);
+        let desc = arr.slice().sort((a, b) => b - a);
+        console.log("Ascending:", asc);
+        console.log("Descending:", desc);
+
+        //  Merge two arrays and remove duplicates
+        let arr2 = [3, 5, 7, 10, 20];
+        let mergedUnique = [...new Set([...arr, ...arr2])];
+        console.log("Merged Unique:", mergedUnique);
+
+        //  Count how many times a specific element appears
+        let target = 10;
+        let count = arr.filter(x => x === target).length;
+        console.log(target + " appears", count, "times");
+
+        //  Find the second largest element
+        let secondLargest = [...new Set(arr)]
+            .sort((a, b) => b - a)[1];
+        console.log("Second Largest:", secondLargest);
+
+        //  Check if all elements are even
+        let allEven = arr.every(x => x % 2 === 0);
+        console.log("All Even?:", allEven);
+
+        //  Rotate array by n positions (left shift)
+        let n = 2;
+        let rotated = arr.slice(n).concat(arr.slice(0, n));
+        console.log("Rotated by " + n + ":", rotated);
+
+
+
+    </script>
+
+</body>
+
+</html>
