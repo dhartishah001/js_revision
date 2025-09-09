@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loops In JS</title>
+  </head>
+  <body>
+    <h1>Loops In JS</h1>
+    <img src="../assets/img/loop.png" alt="" />
+
+
+
+    <hr>
+
+    <div id="box"></div>
+    <hr>
+
+    <script>
+      // Loops In JS
+
+      // 1. for loop
+
+      //   Syntax
+
+      //   for (Initialization; Condition; Progress/Process) {
+      //     // Loop Body
+      //   }
+
+      //   let arr = [10,20,30,40,50,60,7,8]
+
+      //   arr[0]
+      //   arr[1]
+      //   arr[2]
+
+      //   for (let i = 0; i < arr.length; i++) {
+      //     console.log(arr[i]);
+
+      //   }
+
+      // 2. while loop
+
+      //   Syntax
+
+      //   Initialization
+
+      //   while (condition) {
+
+      // loop body
+
+      // Progress/Process
+      //   }
+
+      //   let i = 0;
+
+      //   while (i <10) {
+      //     console.log(i);
+      //     i++;
+
+      //   }
+
+      // 3. do while loop
+
+      //   syntax
+
+      //   Initialization;
+      //   do {
+      //     // loop body
+      //     // Progress/Process
+      //   } while (condition);
+
+      //   let i = 0;
+      //   do {
+      //     console.log(i);
+      //     i++;
+      //   } while (i < 10);
+
+      // Advance Loop
+
+      let fruits = ["Banana", "Apple", "Kiwi", {}, {}, {name: "Rohan"}];
+      console.log(fruits);
+
+      // for each
+
+      fruits.forEach(element => {
+          console.log(element?.name);
+
+      });
+
+      // for of
+
+    //   for (const element of fruits) {
+    //       console.log(element);
+
+    //   }
+
+      // for in
+
+
+    //   let obj = {
+    //     name: "Rohan", 
+    //     age: 20,
+    //     isLoggedIn: true
+    //   }
+
+
+    //   for (const key in obj) {
+    //     // console.log(key);
+    //     console.log(obj[key]);
+        
+    //   }
+
+    //   for (const key in obj) {
+    //     if (Object.prototype.hasOwnProperty.call(obj, key)) {
+    //         const element = obj[key];
+    //         console.log(element);
+            
+    //     }
+    //   }
+    </script>
+
+
+<!-- <script src="api.js"></script> -->
+  </body>
+</html>
