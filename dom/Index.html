@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Number Checker & Math Operations</title>
+</head>
+<body>
+  <h1>JavaScript Number Programs</h1>
+
+  
+  <h2>1. Operations on Two Numbers</h2>
+  
+  <input type="number" id="num1" placeholder="Enter first number">
+  <input type="number" id="num2" placeholder="Enter second number">
+  <button onclick="calculate()">Calculate</button>
+  
+  <p id="result"></p>
+
+  <hr>
+
+  <!-- (Positive, Negative, Zero) --> 
+  <h2>2. Check if a Number is Positive, Negative or Zero</h2>
+  
+  <input type="number" id="numInput" placeholder="Enter a number">
+  <button onclick="checkNumber()">Check</button>
+  
+  <p id="resultCheck"></p>
+
+  <script>
+    // Function for Part 1
+    function calculate() {
+      let a = parseFloat(document.getElementById("num1").value);
+      let b = parseFloat(document.getElementById("num2").value);
+      
+      let sum = a + b;
+      let difference = a - b;
+      let product = a * b;
+      let division = b !== 0 ? (a / b) : "Cannot divide by zero";
+
+      let output = `
+        Sum = ${sum} <br>
+        Difference = ${difference} <br>
+        Product = ${product} <br>
+        Division = ${division}
+      `;
+
+      document.getElementById("result").innerHTML = output;
+    }
+
+    // Function for Part 2
+    function checkNumber() {
+      let num = document.getElementById("numInput").value;
+      let result = "";
+
+      if (num > 0) {
+        result = num + " is Positive";
+      } else if (num < 0) {
+        result = num + " is Negative";
+      } else {
+        result = "The number is Zero";
+      }
+
+      document.getElementById("resultCheck").innerText = result;
+    }
+  </script>
+</body>
+</html>
