@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+  </head>
+  <body>
+
+   
+    <input type="text" name="uname" id="uname" onblur="validateUserName()" />
+    <br />
+    <br />
+    <input type="text" name="upass" id="upass" onblur="validateUserPass()"/>
+    <br />
+    <br />
+    <input type="text" name="uemail" id="uemail" onblur="validateUserEmail()"/>
+    <br />
+    <br />
+    <input type="text" name="umobile" id="umobile" onblur="validateUserMobile()"/>
+   
+
+    <script>
+      let uname = document.getElementById("uname");
+      let upass = document.getElementById("upass");
+      let uemail = document.getElementById("uemail");
+      let umobile = document.getElementById("umobile");
+
+    
+    //   function validateUserName() {
+    //     if (uname.value == "") {
+    //       console.log("User Name is Required");
+    //     } else {
+    //       console.log(uname.value);
+    //     }
+    //   }
+    //   function validateUserPass() {
+    //     if (upass.value == "") {
+    //       console.log("User Password is Required");
+    //     } else {
+    //       console.log(upass.value);
+    //     }
+    //   }
+    //   function validateUserEmail() {
+    //     if (uemail.value == "") {
+    //       console.log("User Email is Required");
+    //     } else {
+    //       console.log(uemail.value);
+    //     }
+    //   }
+    //   function validateUserMobile() {
+    //     if (umobile.value == "") {
+    //       console.log("User Mobile is Required");
+    //     } else {
+    //       console.log(umobile.value);
+    //     }
+    //   }
+    </script>
+  </body>
+</html>
