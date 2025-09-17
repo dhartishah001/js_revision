@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Object Practice (No Functions)</title>
+</head>
+<body>
+  <script>
+    // 1. Create an object and print properties
+    let student = {
+      name: "Aarav",
+      age: 20,
+      marks: 85
+    };
+    console.log("Student Object:", student);
+    console.log("Name:", student.name);
+    console.log("Age:", student.age);
+    console.log("Marks:", student.marks);
+
+    // 2. Update a property
+    student.age = 21;
+    console.log("Updated Age:", student.age);
+
+    // 3. Delete a property
+    delete student.marks;
+    console.log("After Deleting Marks:", student);
+
+    // 4. Count number of properties
+    let count = Object.keys(student).length;
+    console.log("Number of Properties:", count);
+
+    // 5. Check if a property exists
+    let hasName = student.hasOwnProperty("name");
+    let hasMarks = student.hasOwnProperty("marks");
+    console.log("Has 'name'?", hasName);
+    console.log("Has 'marks'?", hasMarks);
+
+    // 6. Convert object to keys and values arrays
+    let keys = Object.keys(student);
+    let values = Object.values(student);
+    console.log("Keys:", keys);
+    console.log("Values:", values);
+
+    // 7. Merge two objects
+    let address = { city: "Mumbai", country: "India" };
+    let merged = { ...student, ...address };
+    console.log("Merged Object:", merged);
+
+    // 8. Array of objects (students) filter marks > 80
+    let students = [
+      { name: "Aarav", marks: 85 },
+      { name: "Meera", marks: 75 },
+      { name: "Raj", marks: 90 }
+    ];
+    let topStudents = students.filter(s => s.marks > 80);
+    console.log("Students with marks > 80:", topStudents);
+
+    // 9. Sort array of objects by age
+    let people = [
+      { name: "Riya", age: 25 },
+      { name: "Kunal", age: 20 },
+      { name: "Arjun", age: 22 }
+    ];
+    let sortedByAge = people.sort((a, b) => a.age - b.age);
+    console.log("Sorted by Age:", sortedByAge);
+
+    // 10. Find object with highest salary
+    let employees = [
+      { name: "Amit", salary: 40000 },
+      { name: "Neha", salary: 55000 },
+      { name: "Vikram", salary: 50000 }
+    ];
+    let highestSalary = employees.reduce((max, emp) => emp.salary > max.salary ? emp : max);
+    console.log("Employee with Highest Salary:", highestSalary);
+
+  </script>
+</body>
+</html>
