@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+
+<body>
+
+    <script>
+        // 1. Check positive, negative, or zero
+        function checkNumber(num) {
+            if (num > 0) console.log("Positive");
+            else if (num < 0) console.log("Negative");
+            else console.log("Zero");
+        }
+
+        // 2. Sum, difference, product, division
+        function operations(a, b) {
+            return {
+                sum: a + b,
+                difference: a - b,
+                product: a * b,
+                division: b !== 0 ? a / b : "Cannot divide by zero"
+            };
+        }
+
+        // 3. Count vowels in a string
+        function countVowels(str) {
+            let vowels = "aeiouAEIOU";
+            let count = 0;
+            for (let ch of str) {
+                if (vowels.includes(ch)) count++;
+            }
+            return count;
+        }
+
+        // 4. Find largest and smallest in list
+        function findMinMax(arr) {
+            let min = Math.min(...arr);
+            let max = Math.max(...arr);
+            return { min, max };
+        }
+
+        // 5. Factorial using loop
+        function factorial(n) {
+            let fact = 1;
+            for (let i = 1; i <= n; i++) {
+                fact *= i;
+            }
+            return fact;
+        }
+
+        // 6. Check palindrome
+        function isPalindrome(str) {
+            let reversed = str.split("").reverse().join("");
+            return str === reversed;
+        }
+
+        // 7. Check prime number
+        function isPrime(num) {
+            if (num <= 1) return false;
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i === 0) return false;
+            }
+            return true;
+        }
+
+        // 8. Remove duplicates from list
+        function removeDuplicates(arr) {
+            return [...new Set(arr)];
+        }
+
+        // 9. Fibonacci series up to n terms
+        function fibonacci(n) {
+            let a = 0, b = 1;
+            console.log(a);
+            if (n > 1) console.log(b);
+            for (let i = 3; i <= n; i++) {
+                let c = a + b;
+                console.log(c);
+                a = b;
+                b = c;
+            }
+        }
+
+        // 10. Star pattern (triangle)
+        function starPattern(n) {
+            for (let i = 1; i <= n; i++) {
+                console.log("*".repeat(i));
+            }
+        }
+
+        // --------------------------
+        // Function Calls (Examples)
+        // --------------------------
+        checkNumber(5);              // Positive
+        console.log(operations(10, 2));
+        console.log(countVowels("Hello World"));
+        console.log(findMinMax([10, 2, 35, 7, 1]));
+        console.log(factorial(5));
+        console.log(isPalindrome("madam"));
+        console.log(isPrime(7));
+        console.log(removeDuplicates([1, 2, 2, 3, 4, 4]));
+        fibonacci(7);
+        starPattern(5);
+
+    </script>
+</body>
+
+</html>
